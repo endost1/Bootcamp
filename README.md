@@ -1,2 +1,3 @@
-# Desafio de projeto sobre Git/GitHub da DIO
-Primeiro desafio de projeto da DIO.me
+# Repositorios sobre o BOOTCAMP SANTANDER FULLSTACK
+
+Aqui contem todas aulas práticas e projetos feito por mim durante o bootcamp
