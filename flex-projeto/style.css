@@ -18,8 +18,25 @@
     display: flex;
     max-width: 992px;
     margin: auto;
+    width: 100%;
 }
 
 .cabecalho {
     background-color: #122A57;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cabecalho .list_items {
+    display: flex;
+}
+
+.list_items li a {
+    color: #fff;
+}
+
+.cabecalho .menu {
+    justify-content: space-between;
 }
