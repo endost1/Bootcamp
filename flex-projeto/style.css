@@ -10,7 +10,7 @@
     padding: 0;
 }
 
-.ul li a {
+a {
     text-decoration: none;
 }
 
@@ -24,18 +24,22 @@ div img {
     max-width: 992px;
     margin: auto;
     width: 100%;
+    min-width: 320px;
 }
 
-.cabecalho {
+header {
     background-color: #122A57;
     height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     color: #fff;
 }
 
-.cabecalho .lista_items {
+.cabecalho {
+    justify-content: space-between;
+}
+
+.cabecalho .menu {
     display: flex;
     width: 100%;
     max-width: 260px;
@@ -43,12 +47,8 @@ div img {
     align-items: center;
 }
 
-.lista_items li a {
+.lista_items{
     color: #fff;
-}
-
-.cabecalho .menu {
-    justify-content: space-between;
 }
 
 .apresentacao {
@@ -131,7 +131,7 @@ div img {
     text-align: center;
 }
 
-#servicos div h2 {
+#servicos h2 {
     color: #fff;
     font-size: 36px;
     margin-bottom: 45px;
@@ -168,17 +168,29 @@ div img {
 #planos {
     flex-direction: column;
     min-height: 100vh;
+    padding-top: 60px;
+}
+
+#planos h2 {
+    color: #122A57;
+    font-size: 36px;
+    margin-bottom: 45px;
+    font-weight: 700;
 }
 
 .lista_planos {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 200px;
 }
 
 .item_planos {
     flex: 1;
     border: 4px solid #122A57;
     margin-right: 20px;
+    padding: 20px;
+    max-width: 240px;
 }
 
 .item_planos .btn {
@@ -190,8 +202,10 @@ div img {
     font-size: 24px;
     display: flex;
     flex-direction: column;
-    color: #122A57;
     text-align: center;
+    margin-top: 20px;
+    color: #122A57;
+    font-weight: 700;
 }
 
 .item_planos h3::after{
@@ -200,11 +214,88 @@ div img {
     width: 100%;
     height: 3px;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .item_planos ul {
     padding: 10px 20px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.item_planos ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    color: #122A57;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.item_planos ul li::before{
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: #122A57;
+    margin-right: 8px;
+}
+
+footer {
+    background-color: #122A57;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+footer .footer {
+    justify-content: space-between;
+    color: #fff;
+}
+
+/* mobile - responsividade */
+
+@media(max-width: 992px){
+    .flex_container {
+        flex-direction: column;
+    }
+
+    .apresentacao {
+        flex-direction: column-reverse;
+    }
+
+    .apresentacao .texto_apresentacao {
+        width: 100%;
+    }
+
+    #quem_somos {
+        flex-direction: column;
+    }
+
+    #quem_somos img {
+        min-width: 320px;
+        margin: auto;
+    }
+
+    .lista_servicos {
+        flex-direction: column;
+    }
+
+    .item_servicos img {
+        width: 50%;
+        margin: auto;
+    }
+
+    .lista_planos {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+    }
+
+    .lista_planos .item_planos {
+        max-width: 90%;
+        margin: auto;
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
